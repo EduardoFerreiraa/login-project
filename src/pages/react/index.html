@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <title>Login</title>
   </head>
   <body>
@@ -25,18 +31,35 @@
               </div>
               <div className="login">
                 <div className="form-login">
-                    <h1 className="title">Login</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aliquam, rerum commodi iusto porro, placeat totam distinctio beatae, alias aut nostrum molestiae quam deleniti quidem necessitatibus earum saepe quaerat. Ipsum.</p>
-                    
-                    <button className="btn-buttons">Google</button>
-                    <button className="btn-buttons">Facebook</button>
+                  <h1 className="title">Login</h1>
+                  <p id="facaLogin">
+                    Faça login abaixo ou cadastre-se para criar uma conta
+                  </p>
 
-                    <p>Ou</p>
+                  <div className="content-logins">
+                    <button className="btn-buttons google">Google</button>
+                    <button className="btn-buttons face">Facebook</button>
+                  </div>
 
-                    <input className="inputs" type="email" placeholder="Digite seu email..."/>
-                    <input type="password" className="inputs" placeholder="Digite sua senha..."/>
-                    <button className="btn-login">Login</button>
-                    <a href="#">Esqueceu a senha?</a>
+                  <p id="ou">Ou</p>
+
+                  <div className="content-inputs">
+                    <input
+                      className="inputs email"
+                      type="email"
+                      placeholder="Digite seu email..."
+                    />
+                    <input
+                      type="password"
+                      className="inputs senha"
+                      placeholder="Digite sua senha..."
+                    />
+                  </div>
+
+                  <button className="btn-login">Log in</button>
+                  <a className="linkEsqueceu-senha" href="#">
+                    Esqueceu a senha?
+                  </a>
                 </div>
               </div>
             </section>

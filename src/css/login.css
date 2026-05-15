@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #0b0436, #050c30, #0a0536, #0a034b);
+  background: linear-gradient(135deg, #031f35, #051430, #041d31, #024d5a);
 }
 
 .container {
@@ -20,27 +20,34 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  transition: 0.6s;
+}
+
+.content:hover {
+  transform: scale(1.01);
 }
 
 .content-video {
-  width: 100%;
+  width: 80%;
 }
 
 .fund-video {
   border-radius: 20px 0 0 20px;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.425);
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.336);
   height: 90vh;
   width: 100%;
   object-fit: cover;
 }
 
+/* FORMULÁRIO */
+
 .login {
   border-radius: 0 20px 20px 0;
   background-color: white;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.425);
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.336);
   padding: 25px;
   height: 90vh;
-  width: 70%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,9 +55,115 @@ body {
 
 .form-login {
   padding: 25px;
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.title {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+
+#facaLogin {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  padding-bottom: 25px;
+}
+
+.content-logins {
+  gap: 3px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.btn-buttons {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: rgb(235, 235, 235);
+  padding: 15px 40px;
+  margin-bottom: 25px;
+  transition: 0.4s;
+}
+
+.btn-buttons:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.google {
+  border-radius: 10px 0 0 10px;
+}
+
+.face {
+  border-radius: 0 10px 10px 0;
+}
+
+#ou {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.content-inputs {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 2px;
+  margin-bottom: 25px;
+}
+
+.inputs {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  border: 1px solid transparent;
+  padding: 12px 40px;
+  background-color: rgb(235, 235, 235);
+  width: 100%;
+  transition: 0.4s;
+}
+
+.inputs:hover {
+  border: 1px solid black;
+}
+
+.inputs:focus {
+  transform: scale(1.01);
+}
+
+.email {
+  border-radius: 10px 10px 0 0;
+}
+
+.senha {
+  border-radius: 0px 0px 10px 10px;
+}
+
+.btn-login {
+  font-family:
+    'Inter' Arial,
+    Helvetica,
+    sans-serif;
+  font-weight: bolder;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 12px 40px;
+  background-color: black;
+  transition: 0.4s;
+}
+
+.btn-login:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.linkEsqueceu-senha {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  color: black;
+  margin-top: 15px;
+  text-align: center;
 }
