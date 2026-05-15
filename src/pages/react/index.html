@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/login.css" />
     <title>Login</title>
   </head>
   <body>
@@ -12,6 +13,38 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <script></script>
+    <script type="text/babel">
+      function App() {
+        return (
+          <main className="container">
+            <section className="content">
+              <div>
+                <video className="fund-video">
+                  <source src="../../videos/video.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div className="login">
+                <div className="form-login">
+                    <h1>Login</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aliquam, rerum commodi iusto porro, placeat totam distinctio beatae, alias aut nostrum molestiae quam deleniti quidem necessitatibus earum saepe quaerat. Ipsum.</p>
+                    
+                    <button>Google</button>
+                    <button>Facebook</button>
+
+                    <p>Ou</p>
+
+                    <input type="email"/>
+                    <input type="password"/>
+                    <button>Login</button>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+              </div>
+            </section>
+          </main>
+        )
+      }
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+    </script>
   </body>
 </html>
