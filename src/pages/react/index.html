@@ -18,24 +18,24 @@
         return (
           <main className="container">
             <section className="content">
-              <div>
-                <video className="fund-video">
-                  <source src="../../videos/video.mp4" type="video/mp4" />
+              <div className="content-video">
+                <video autoPlay muted loop className="fund-video">
+                  <source src="../../videos/video3.mp4" type="video/mp4" />
                 </video>
               </div>
               <div className="login">
                 <div className="form-login">
-                    <h1>Login</h1>
+                    <h1 className="title">Login</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aliquam, rerum commodi iusto porro, placeat totam distinctio beatae, alias aut nostrum molestiae quam deleniti quidem necessitatibus earum saepe quaerat. Ipsum.</p>
                     
-                    <button>Google</button>
-                    <button>Facebook</button>
+                    <button className="btn-buttons">Google</button>
+                    <button className="btn-buttons">Facebook</button>
 
                     <p>Ou</p>
 
-                    <input type="email"/>
-                    <input type="password"/>
-                    <button>Login</button>
+                    <input className="inputs" type="email" placeholder="Digite seu email..."/>
+                    <input type="password" className="inputs" placeholder="Digite sua senha..."/>
+                    <button className="btn-login">Login</button>
                     <a href="#">Esqueceu a senha?</a>
                 </div>
               </div>

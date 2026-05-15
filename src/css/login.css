@@ -4,3 +4,53 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #0b0436, #050c30, #0a0536, #0a034b);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.content {
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-video {
+  width: 100%;
+}
+
+.fund-video {
+  border-radius: 20px 0 0 20px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.425);
+  height: 90vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.login {
+  border-radius: 0 20px 20px 0;
+  background-color: white;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.425);
+  padding: 25px;
+  height: 90vh;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-login {
+  padding: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
