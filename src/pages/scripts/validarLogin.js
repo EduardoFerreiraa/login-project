@@ -1,2 +1,0 @@
-/* Validando login de usuário */
-

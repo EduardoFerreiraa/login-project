@@ -1,2 +1,0 @@
-/* Validando cadastro de usuário */
-

@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="shortcut icon"
+      href="../../images/favicon.png"
+      type="image/x-icon"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
@@ -21,7 +26,56 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/babel">
+      function validarCadastro(email, senha, confirmarSenha, setErro) {
+        if (!email) {
+          setErro("Email é obrigatório.");
+          return false;
+        }
+
+        if (!email.includes("@")) {
+          setErro("Email deve conter @");
+          return false;
+        }
+
+        if (!senha) {
+          setErro("Senha é obrigatória.");
+          return false;
+        }
+
+        if (senha.length < 6) {
+          setErro("Senha precisa ter no mínimo 6+ caracteres.");
+          return false;
+        }
+
+        if (!confirmarSenha) {
+          setErro("Confirme a sua senha.");
+          return false;
+        }
+
+        if (confirmarSenha !== senha) {
+          setErro("As senhas não conferem.");
+          return false;
+        }
+
+        setErro("");
+        return true;
+      }
+
       function App() {
+        const [email, setEmail] = React.useState("");
+        const [senha, setSenha] = React.useState("");
+        const [confirmarSenha, setConfirmarSenha] = React.useState("");
+        const [erro, setErro] = React.useState("");
+
+        function handleSubmit(evento) {
+          evento.preventDefault();
+          const valido = validarCadastro(email, senha, confirmarSenha, setErro);
+
+          if (valido) {
+            alert("Cadastro realizado com sucesso!");
+          }
+        }
+
         return (
           <main className="container">
             <section className="content">
@@ -34,7 +88,7 @@
                 <div className="form-login">
                   <h1 className="title">Cadastre-se</h1>
                   <p id="facaLogin">
-                    Faça seu cadastro abaixo para criar um conta!
+                    Faça seu cadastro abaixo para criar uma conta!
                   </p>
 
                   <div className="content-logins">
@@ -43,29 +97,39 @@
                   </div>
 
                   <p id="ou">Ou</p>
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className="content-inputs">
                       <input
                         id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         className="inputs email"
                         type="email"
                         placeholder="Digite seu email..."
                       />
                       <input
                         id="senha"
+                        value={senha}
+                        onChange={(e) => setSenha(e.target.value)}
                         type="password"
                         className="inputs"
                         placeholder="Digite sua senha..."
                       />
                       <input
-                        id="confimarSenha"
+                        id="confirmarSenha"
+                        value={confirmarSenha}
+                        onChange={(e) => setConfirmarSenha(e.target.value)}
                         type="password"
                         className="inputs confirmeSenha"
                         placeholder="Confirme sua senha..."
                       />
                     </div>
 
-                    <button className="btn-login">Cadastrar</button>
+                    {erro && <p id="erroCadastro">{erro}</p>}
+
+                    <button type="submit" className="btn-login">
+                      Cadastrar
+                    </button>
                   </form>
 
                   <a className="linkEsqueceu-senha" href="index.html">
@@ -75,11 +139,10 @@
               </div>
             </section>
           </main>
-        )
+        );
       }
 
-      ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+      ReactDOM.createRoot(document.getElementById("root")).render(<App />);
     </script>
-    <script type="text/javascript" src="../scripts/validarCadastro.js"></script>
   </body>
 </html>
