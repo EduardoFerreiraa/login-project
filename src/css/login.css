@@ -150,6 +150,7 @@
   padding: 12px 40px;
   background-color: black;
   transition: 0.4s;
+  width: 100%;
 }
 
 .btn-login:hover {

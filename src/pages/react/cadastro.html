@@ -43,26 +43,31 @@
                   </div>
 
                   <p id="ou">Ou</p>
+                  <form>
+                    <div className="content-inputs">
+                      <input
+                        id="email"
+                        className="inputs email"
+                        type="email"
+                        placeholder="Digite seu email..."
+                      />
+                      <input
+                        id="senha"
+                        type="password"
+                        className="inputs"
+                        placeholder="Digite sua senha..."
+                      />
+                      <input
+                        id="confimarSenha"
+                        type="password"
+                        className="inputs confirmeSenha"
+                        placeholder="Confirme sua senha..."
+                      />
+                    </div>
 
-                  <div className="content-inputs">
-                    <input
-                      className="inputs email"
-                      type="email"
-                      placeholder="Digite seu email..."
-                    />
-                    <input
-                      type="password"
-                      className="inputs"
-                      placeholder="Digite sua senha..."
-                    />
-                    <input
-                      type="password"
-                      className="inputs confirmeSenha"
-                      placeholder="Confirme sua senha..."
-                    />
-                  </div>
+                    <button className="btn-login">Cadastrar</button>
+                  </form>
 
-                  <button className="btn-login">Cadastrar</button>
                   <a className="linkEsqueceu-senha" href="index.html">
                     Faça login aqui
                   </a>
@@ -75,5 +80,6 @@
 
       ReactDOM.createRoot(document.getElementById('root')).render(<App />)
     </script>
+    <script type="text/javascript" src="../scripts/validarCadastro.js"></script>
   </body>
 </html>

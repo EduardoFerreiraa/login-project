@@ -42,21 +42,26 @@
                   </div>
 
                   <p id="ou">Ou</p>
+                  <form id="form">
+                    <div className="content-inputs">
+                      <input
+                        id="email"
+                        className="inputs email"
+                        type="email"
+                        placeholder="Digite seu email..."
+                      />
+                      <input
+                        id="senha"
+                        type="password"
+                        className="inputs senha"
+                        placeholder="Digite sua senha..."
+                      />
+                    </div>
 
-                  <div className="content-inputs">
-                    <input
-                      className="inputs email"
-                      type="email"
-                      placeholder="Digite seu email..."
-                    />
-                    <input
-                      type="password"
-                      className="inputs senha"
-                      placeholder="Digite sua senha..."
-                    />
-                  </div>
-
-                  <button className="btn-login">Log in</button>
+                    <button className="btn-login" type="submit">
+                      Log in
+                    </button>
+                  </form>
                   <a className="linkEsqueceu-senha" href="cadastro.html">
                     Esqueceu a senha?
                   </a>
@@ -69,5 +74,6 @@
 
       ReactDOM.createRoot(document.getElementById('root')).render(<App />)
     </script>
+    <script type="text/javascript" src="../scripts/validarLogin.js"></script>
   </body>
 </html>
