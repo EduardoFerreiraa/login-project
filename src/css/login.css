@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+#body {
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(135deg, #031f35, #051430, #041d31, #024d5a);
 }
@@ -21,10 +21,6 @@ body {
   justify-content: center;
   align-items: center;
   transition: 0.6s;
-}
-
-.content:hover {
-  transform: scale(1.01);
 }
 
 .content-video {
@@ -130,7 +126,7 @@ body {
 }
 
 .inputs:focus {
-  transform: scale(1.01);
+  border: 0.5px solid black;
 }
 
 .email {
@@ -166,6 +162,10 @@ body {
   color: black;
   margin-top: 15px;
   text-align: center;
+}
+
+.confirmeSenha {
+  border-radius: 0px 0px 15px 15px;
 }
 
 @media (max-width: 1000px) {
