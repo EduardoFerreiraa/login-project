@@ -12,11 +12,28 @@ body {
     ),
     linear-gradient(
       135deg,
-      #130601 0%,
+      #cf3b00 0%,
       #491808 15%,
       #000000 35%,
-      #1a0302 60%,
+      #1f0200 60%,
       #521000 85%,
-      #220404 100%
+      #270303 100%
     );
+
+  background-size: 400% 400%;
+  animation: mudarBackground 5s ease infinite;
+}
+
+@keyframes mudarBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
