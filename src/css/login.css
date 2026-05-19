@@ -196,6 +196,11 @@ body {
   text-align: center;
 }
 
+.content-alterandoPagina {
+  margin-top: 18px;
+  text-align: center;
+}
+
 .confirmeSenha {
   border-radius: 0px 0px 15px 15px;
 }
